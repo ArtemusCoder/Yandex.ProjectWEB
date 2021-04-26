@@ -1,21 +1,34 @@
 
 .header-main{
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .header-profile{
-    margin-top: 55px;
-    width: 50%;
+    margin-top: 30px;
+    width: 98%;
+    display: inline-block;
     border-radius: 5px;
     background-color: black;
     border: 1px solid black;
     margin: 0 auto;
 }
 
+.info-profile{
+    text-align: center;
+    width: 95%;
+    height: 60%;
+}
+
+.name-profile{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Comfortaa', cursive;
+    font-size: 50px;
+}
+
 .image-div-profile{
-    align-items: center;
-    float: left;
-    width: 30%;
+  text-align: center;
+    width: 100%;
     height: 30%;
 }
 
@@ -33,19 +46,6 @@
     opacity: 0.7;
 }
 
-.info-profile{
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-
-.name-profile{
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 50px;
-}
-
 .email-profile{
     color: white;
     font-family: 'Comfortaa', cursive;
@@ -58,25 +58,37 @@
 }
 
 .update-profile-div{
-    padding: 14px 16px;
-    width:80%;
+    padding: 40px 16px;
+    text-align: center;
+    width:50%;
     height: auto;
     font-family: 'Comfortaa', cursive;
     margin: 0 auto;
-    text-align: center;
-    margin-top: 15px;
 }
 
 .update-profile-div a{
-    width: 75%;
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 20px;
     line-height: 15px;
     text-decoration: none;
-    background-color: black;
-    border: 5px solid black;
-    border-radius: 20px;
     color: white;
-    transition: 0.5s ease-in-out;
 }
+
+.update-profile-div a:hover{
+    animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      transfrom: scale(1.0, 1.0);
+    }
+  
+    to {
+      transform: scale(1.2, 1.2);
+    }
+  }
 
 .update-profile-div a:visited{
     color: white;
@@ -96,6 +108,31 @@
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
 
-#logout{
-    display: none;
-}
+  .posts-by-user{
+    width:50%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+  }
+
+  .post-by-user{
+    width:100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .post-by-user a{
+      font-size: 30px;
+      text-decoration: none;
+      transition-duration: 1s;
+      border: 5px solid #fff;
+      color: darkblue;
+  }
+
+  .post-by-user a:hover{
+    background-color: #A02DFF;
+    border-radius: 10px;
+    border: 5px solid #A02DFF;
+  }

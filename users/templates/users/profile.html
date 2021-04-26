@@ -1,12 +1,14 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags%}
 {% block content %}
+<div class="content-html">
+    <h2 style="text-align: center;"> Данные пользователя </h2>
     <div class="header-profile">
         <div class="image-div-profile">
-            <img class="photo-profile" id="photoProfile" src="{{ user.profile.image }}">
+            <img class="photo-profile" id="photoProfile" src="{{ user.profile.image.url }}">
         </div>
         <div class="info-profile">
-            <p class="special-info-profile"> Имя: </p>
+            <p class="special-info-profile"> Имя пользователя: </p>
             <b class="name-profile"> {{user.username}} </b>
             <br />
             <p class="special-info-profile"> EMAIL: </p>
@@ -15,6 +17,9 @@
     </div>
     <div class="update-profile-div">
         <a href="{% url 'edit-profile' %}"> Изменить профиль </a>
+    </div>
+    <div class="update-profile-div" id="logout">
+        <a href="{% url 'logout' %}"> Выйти </a>
     </div>
 
 

@@ -25,7 +25,7 @@ SECRET_KEY = '12390124382094809234'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://yandexlycei.herokuapp.com']
+ALLOWED_HOSTS = ['https://yandexlycei.herokuapp.com', '127.0.0.1']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS

@@ -16,5 +16,6 @@ urlpatterns = [
     path('password-reset/confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'), name='password_reset_complete'),
     path('profile/', user_views.profile, name='profile'),
-    path('edit/', user_views.profile_edit, name='edit-profile')
+    path('edit/', user_views.profile_edit, name='edit-profile'),
+    path('activate/<uidb64>/<token>', user_views.activate, name='activate')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

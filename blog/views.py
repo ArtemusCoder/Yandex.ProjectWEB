@@ -10,6 +10,12 @@ def Home(request):
    }
     return render(request, 'blog/index.html', context)
 
+def main(request):
+    context = {
+        'title': 'Главная',
+    }
+    return render(request, 'blog/main.html', context)
+
 
 class PostListView(ListView):
     model = Post

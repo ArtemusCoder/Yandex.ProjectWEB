@@ -1,0 +1,23 @@
+
+.content-posts{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-post img{
+    width: 80;
+    height: 80;
+    border-radius: 50px;
+    float: left;
+}
+
+.blog_div{
+    color: white;
+    background-color: #404140;
+}
+
+.blog_div a{
+    text-decoration: none;
+}
+
