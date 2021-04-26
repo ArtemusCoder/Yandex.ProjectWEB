@@ -1,0 +1,183 @@
+@media only screen and (min-width: 768px){
+.border-bottom.mb-4{
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+.content-section, .logout-section, .register-section{
+    border: 2px solid #fbfafb;
+    background-color: #fbfafb;
+    width: 600px;
+    margin: 0 auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.form-group{
+    border:none;
+}
+
+input[type=text],input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+.btn.btn-outline-info{
+    margin-left: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: auto;
+    height: 50px;
+    text-decoration: none;
+    background-color: white; 
+}
+.btn.btn-outline-info:hover{
+    background-color: blue;
+    color: white;
+}
+
+.text-muted.ml-2 a{
+    margin-left: 10px;
+    color: grey;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.text-muted.ml-2 a:hover{
+    color: black;
+}
+
+.text-muted.ml-2 a:visited{
+    color:grey;
+}
+
+.border-top.pt-3{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.border-top.pt-3 a{
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.border-top.pt-3 a:hover{
+    color: blue;
+}
+
+.border-top.pt-3 a:visited{
+    color:black;
+}
+
+
+textarea{
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    display:block;
+}
+}
+
+
+
+
+
+@media only screen and (max-width: 768px){
+    .border-bottom.mb-4{
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    
+    .content-section, .logout-section, .register-section{
+        border: 2px solid #fbfafb;
+        background-color: #fbfafb;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+        vertical-align: middle;
+    }
+    
+    .form-group{
+        border:none;
+    }
+    
+    input[type=text],input[type=password], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+    
+    .btn.btn-outline-info{
+        margin-left: 12px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 2px solid blue;
+        border-radius: 5px;
+        width: auto;
+        height: 15%;
+        text-decoration: none;
+        background-color: white; 
+    }
+    .btn.btn-outline-info:hover{
+        background-color: blue;
+        color: white;
+    }
+    
+    .text-muted.ml-2 a{
+        margin-left: 1%;
+        color: grey;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+    .text-muted.ml-2 a:hover{
+        color: black;
+    }
+    
+    .text-muted.ml-2 a:visited{
+        color:grey;
+    }
+    
+    .border-top.pt-3{
+        margin-top: 8%;
+        font-size: 20px;
+    }
+    
+    .border-top.pt-3 a{
+        margin-left: 1%;
+        color: black;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+    .border-top.pt-3 a:hover{
+        color: blue;
+    }
+    
+    .border-top.pt-3 a:visited{
+        color:black;
+    }
+    
+    
+    textarea{
+        width: 100%;
+        max-width: 100%;
+        resize: vertical;
+        display:block;
+}
+}

@@ -1,0 +1,92 @@
+@media only screen and (min-width: 768px){
+.header-post{
+    display:table;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.profile-photo-post{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.header-post a{
+    top: 50%;
+    font-size: 30px;
+}
+
+.content-post{
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+}
+
+.info-post{
+    margin-left: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.author-name-post{
+    text-decoration: none;
+    transition-duration: 1s;
+    border: 5px solid #fbfafb;
+    color: darkblue;
+}
+
+.author-name-post:hover{
+    background-color: #A4BCFF;
+    border-radius: 20px;
+    border: 5px solid #A4BCFF;
+}
+
+.author-name-post:visited{
+    color: darkblue;
+}
+
+.update-post-by-user{
+    width:700px;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+.update-post-by-user a{
+    text-decoration: none;
+    transition-duration: 1s;
+    border: 5px solid #fff;
+    color: darkblue;
+}
+
+.update-post-by-user a:hover{
+    background-color: #A02DFF;
+    border-radius: 10px;
+    border: 5px solid #A02DFF;
+}
+
+.update-post-by-user a:visited{
+    color: darkblue;
+}
+
+.warning-text-delete{
+    background-color: #FF8D7D;
+    border: 5px solid #FF8D7D;
+    border-radius: 5px;
+}
+
+.button-delete-post{
+    cursor: pointer;
+    text-decoration: none;
+    border: 5px solid #fff;
+    color: red;
+    background-color: #fff;
+    transition: 1s;
+    border-radius: 5px;
+}
+.button-delete-post:hover{
+    background-color: #FF8D7D;
+}
+
+}

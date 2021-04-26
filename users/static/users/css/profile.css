@@ -1,0 +1,215 @@
+@media only screen and (min-width: 768px){
+.header-profile{
+    margin-top: 30px;
+    display:table;
+    width: 50%;
+    height: 100%;
+    background-color: #fbfafb;
+    border: 1px solid #fbfafb;
+    margin: 0 auto;
+}
+
+.info-profile{
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+.name-profile{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 50px;
+}
+
+.image-div-profile{
+    width: 100%;
+}
+
+.photo-profile{
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius:50%;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.photo-profile:hover{
+    opacity: 0.7;
+}
+
+.email-profile{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.special-info-profile{
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.update-profile-div{
+    width:50%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+.update-profile-div a{
+    text-decoration: none;
+    transition-duration: 1s;
+    border: 5px solid #fff;
+    color: darkblue;
+}
+
+.update-profile-div a:hover{
+    background-color: #A4BCFF;
+    border-radius: 10px;
+    border: 5px solid #A4BCFF;
+}
+
+.update-profile-div a:visited{
+    color: darkblue;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  .posts-by-user{
+    width:50%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+  }
+
+  .post-by-user{
+    width:100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .post-by-user a{
+      font-size: 30px;
+      text-decoration: none;
+      transition-duration: 1s;
+      border: 5px solid #fff;
+      color: darkblue;
+  }
+
+  .post-by-user a:hover{
+    background-color: #A02DFF;
+    border-radius: 10px;
+    border: 5px solid #A02DFF;
+  }
+
+
+}
+
+@media only screen and (max-width: 768px){
+    .header-profile{
+        margin-top: 2%;
+        display:table;
+        width: 90%;
+        height: 100%;
+        background-color: #fbfafb;
+        border: 1px solid #fbfafb;
+        margin: 0 auto;
+    }
+    
+    .info-profile{
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    
+    .name-profile{
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .image-div-profile{
+        width: 72px;
+        height: 72px;
+        float: left;
+    }
+    
+    .photo-profile{
+        width: 100%;
+        vertical-align: top;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    .email-profile{
+        color: black;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .special-info-profile{
+        color: grey;
+        font-family: 'Roboto', sans-serif;
+        
+    }
+    
+    .update-profile-div{
+        width:90%;
+        height: auto;
+        font-family: 'Roboto', sans-serif;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .update-profile-div a{
+        font-size: 30px;
+        text-decoration: none;
+        transition-duration: 1s;
+    }
+    
+    .update-profile-div a:hover{
+        background-color: #A4BCFF;
+    }
+
+      .post-by-user{
+        width:100%;
+        height: auto;
+        font-family: 'Roboto', sans-serif;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    
+      .post-by-user a{
+          font-size: 20px;
+          text-decoration: none;
+          transition-duration: 1s;
+          border: 5px solid #fff;
+          color: darkblue;
+      }
+    
+      .post-by-user a:hover{
+        background-color: #A02DFF;
+        border-radius: 10px;
+        border: 5px solid #A02DFF;
+      }
+    
+    
+}

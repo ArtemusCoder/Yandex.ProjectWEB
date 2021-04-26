@@ -1,0 +1,13 @@
+{% extends "blog/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="logout-section">
+        <h1> Вы успешно вышли!!! </h1> 
+        <div class="border-top">
+            <small class="text-muted" font-family="arial" style="font-size: 25px">
+                Нужен аккаунт? <a href="{% url 'register' %}" style="text-decoration: none"> Зарегистрироваться здесь </a>
+                OR <a href="{% url 'login' %}" style="text-decoration: none"> Войти здесь </a>
+            </small>
+        </div>
+    </div>
+{% endblock %}

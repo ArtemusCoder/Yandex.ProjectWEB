@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags%}
+{% block content %}
+    <div class="header-profile">
+        <div class="image-div-profile">
+            <img class="photo-profile" id="photoProfile" src="{{ user.profile.image }}">
+        </div>
+        <div class="info-profile">
+            <p class="special-info-profile"> Имя: </p>
+            <b class="name-profile"> {{user.username}} </b>
+            <br />
+            <p class="special-info-profile"> EMAIL: </p>
+            <p class="email-profile"> {{user.email}} </p>
+        </div>
+    </div>
+    <div class="update-profile-div">
+        <a href="{% url 'edit-profile' %}"> Изменить профиль </a>
+    </div>
+
+
+    <div class="posts-by-user">
+    <h1> Посты от этого пользователя </h1>
+    {% for post in posts %}
+        {% if post.author == user %}
+            <div class="post-by-user">
+                <a href="{% url 'post-detail' post.id %}"> {{post.title}} </a>
+                <br />
+            </div>
+        {%endif%}
+    {% endfor %}
+    </div>
+    
+{% endblock %}
