@@ -1,6 +1,7 @@
 {% extends "blog/base.html"%}
 {% load crispy_forms_tags %}
-{% block content %}
+{% block content %} </div>
+<div class="content-html2">
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -13,5 +14,6 @@
                 <button class="button-delete-post" type="submit"> ДА, Я УВЕРЕН </button>
             </div>
         </form>
+    </div>
     </div>
 {% endblock %}

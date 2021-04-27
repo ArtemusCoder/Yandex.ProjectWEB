@@ -1,60 +1,80 @@
-﻿<!DOCTYPE html>
-
-<html>
+﻿<HTML>
   <head>
-    <title> {{title}} </title>
-     {% load static %}
-    <link rel="icon"  href="{% static 'blog/images/icon.png' %}" >
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/site.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'users/css/profile.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'users/css/auth.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/post.css' %}" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% load static %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" media="(min-width:768px)" href="{% static 'users/css/profile.css' %}" />
+  <link rel="stylesheet" media="(min-width:768px)" href="{% static 'users/css/auth.css' %}" />
+  <link rel="stylesheet" media="(max-width:767px)" href="{% static 'users/css/profile-small.css' %}" />
+  <link rel="stylesheet" media="(max-width:767px)" href="{% static 'users/css/auth-small.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<title> {{title}} </title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link rel="icon"  href="{% static 'Main/images/test.png' %}" >
+  <link rel="stylesheet" media="(max-width:767px)" href="{% static 'blog/css/site_small.css' %}" />
+  <link rel="stylesheet" media="(min-width:768px)" href="{% static 'blog/css/site_large.css' %}" />
+  <link rel="stylesheet" media="(min-width:768px)" href="{% static 'blog/css/posts_large.css' %}" />
+  <link rel="stylesheet" media="(max-width:768px)" href="{% static 'blog/css/posts_small.css' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Sail&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div class="top">
-      <!-- Navigation labels on top of page -->
-      <a href="{% url 'home' %}" class="link-main-icon"> <img class="main-icon" src="{% static 'blog/images/icon.png' %}"> </a>
-      <button class="open-button" onclick="openForm()">MENU</button>
-      <div id="open_bars" class="form-popup">
-      <a href="{% url 'home' %}" class="nav-item-main"> ГЛАВНОЕ </a>
-      <a href="{% url 'about' %}" class="nav-item-main"> О САЙТЕ </a>
-      <!-- Login and Register labels (on the right side)-->
-      <div class="account_connect">
+  <body style="background-color: black;">
+      <div class="table" id='NavBar'>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+              <li><a class="header-link" href="{% url 'posts' %}">Посты</a></li>
+              <li><a href="{% url 'about' %}">О нас</a> </li>
+          </ul>
+          </div>
+      <header class="mobile-div-header" id="div-mob">
+          <span class="open-span" onclick="myFunction()">&#9776;</span>
+          <a class="main-link" href="{% url 'home' %}"><img src="{% static 'blog/images/icon.png' %}"></a>
           {% if user.is_authenticated %}
-          <a href="{% url 'post-create' %}" class="nav-item" style="margin-right: 30px;"> Создать пост </a>
-          <a href="{% url 'profile' %}" class="name_user"> {{user.username}} </a>
-          <a href="{% url 'logout' %}" class="logout"> Выйти </a>
+          <a class="profile-link-img" href="{% url 'profile' %}"><img src="{% static 'blog/images/profile.png' %}"></a>
           {% else %}
-          <a class="nav-item" href="{% url 'login' %}">ВХОД</a>
-          <a href="{% url 'register' %}" class="nav-item">РЕГИСТРАЦИЯ</a>
+          <a class="profile-link-img" href="{% url 'login' %}"><img src="{% static 'blog/images/profile.png' %}"></a>
           {% endif %}
-          <button class="close-btn" onclick="closeForm()">Закрыть</button>
+      </header>
+      <div class="content">
+      <header>
+          <ul>
+              <li class="main-link-li"><a class="main-link" href="{%  url 'home' %}"><img src="{% static 'blog/images/icon.png' %}"></a></li>
+              <li><a class="header-link" href="{% url 'posts' %}">Посты</a></li>
+              <li><a href="{% url 'about' %}">О нас</a> </li>
+              {% if user.is_authenticated %}
+  
+              <li class="li-right"><a href="{% url 'logout' %}">Выйти</a></li>
+                  <li class="li-right"><a href="{% url 'profile' %}">{{user.username}}</a></li>
+                  <li class="li-right"><a href="{% url 'post-create' %}">Создать пост</a></li>
+                  {% else %}
+                  <li class="li-right"><a href="{% url 'login' %}">Вход</a></li class="right-li">
+              {% endif %}
+          </ul>
+      
+      </header>
+      
+      {% block content %}{% endblock %}
       </div>
+      <div class="bottom-div">
+          <div class="info-bottom">
+              Artemus
+              </div>
+          
       </div>
-    </div>
-    <div id="content" class="content">
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert">
-                  {{message}}
-                </div>
-            {% endfor %}
-        {% endif %}
-        {% block content %}{% endblock %}
-    </div>
-
-    <script>
-    function openForm() {
-      document.getElementById("open_bars").style.display = "block";
-
-    }
-
-    function closeForm() {
-      document.getElementById("open_bars").style.display = "none";
-    }
-</script>
-
+      <script>
+          function myFunction() {
+              var x = document.getElementById("NavBar");
+              if (x.style.width == "100%") {
+                  x.style.width = "0px";
+              } else {
+              x.style.width = "100%";
+              }
+          }
+      </script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
   </body>
-</html>
+</HTML>

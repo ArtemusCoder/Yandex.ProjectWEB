@@ -25,7 +25,7 @@ SECRET_KEY = '12390124382094809234'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['artemusmyapp.herokuapp.com']
+ALLOWED_HOSTS = ['https://yandexlycei.herokuapp.com', '127.0.0.1']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS
@@ -78,18 +78,8 @@ WSGI_APPLICATION = 'Testing.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {
     'default': {
-        # MySQL database engine class.
-        'ENGINE': 'django.db.backends.mysql',
-        # MySQL database host ip.
-        'HOST': 'localhost',
-        # port number.
-        'PORT': '3306',
-        # database name.
-        'NAME': 'django-python-database',
-        # user name.
-        'USER': 'root',
-        # password
-        'PASSWORD': 'NTvfgfgf123MYSQL',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 # Password validation

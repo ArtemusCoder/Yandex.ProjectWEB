@@ -1,22 +1,26 @@
 {%extends "blog/base.html" %}
 
 {% block content %}
-
+<div class="content-html2">
+<div class="content-posts">
 {% for post in posts %}
 <div class="blog_div">
         <div class="header-post"> 
             <img src="{{ post.author.profile.image.url }}" class="profile-photo-post">
-            <div class="index-post-title"><a href="{% url 'post-detail' post.id %}"> {{post.title}} </a></div>
+            <br />
+            <a href="#" class="author-name-post">{{ post.author }}</a>
+            
         </div>
         <div class="content-post">
+            <h1 class="index-post-title"><a href="{% url 'post-detail' post.id %}"> {{post.title}} </a></h1>
             <p>{{ post.content }}</p>
         </div>
         <div class="info-post">
-            <a href="#" class="author-name-post">{{ post.author }}</a>
             <p> {{post.date_post}} </p>
         </div>
 </div>
 {% endfor %}
+</div>
 {% if is_paginated %}
     <div class="navigator-paginator">
     {% if page_obj.has_previous %}
@@ -37,5 +41,7 @@
         <a class="btn-first-paginator" href="?page={{ page_obj.paginator.num_pages }}"> Последнее </a>
     {% endif %}
     </div>
+    
 {% endif %}
+</div>
 {% endblock %}

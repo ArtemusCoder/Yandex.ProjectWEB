@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.closebtn{
+  display: none;
+}
+
+.black-cover{
+  width: 100%;
+  background-color: #111;
+  height: 1px;
+}
+
+.content-html{
+  width: 100%;
+  margin-top: 100px;
+  min-height: 80vh;
+  background-color: white;
+}
+
+.content-html2{
+  width: 100%;
+  margin-top: 100px;
+  min-height: 80vh;
+  background-color: black;
+}
+
+.mobile-div-header{
+  display: none;
+}
+
+html, body{
+  font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+header{
+  background:rgba(0, 0, 0, 0.5);
+  padding:10px 0px;
+  font-size:52px;
+  line-height: 40px;
+  color:black;
+  border-bottom:1px solid rgba(0, 0, 0, 0.5);
+  text-align:center;
+  position:fixed;
+  z-index:999999;
+  width:100%;
+ -webkit-backdrop-filter:saturate(180%) blur(20px);
+backdrop-filter: saturate(180%) blur(20px);
+}
+
+.table{
+display: none;
+}
+
+ul { 
+    list-style-type: none;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  li {
+    margin: 0 auto;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0,0,0,0.0);
+  }
+
+  .content {
+    flex: 1 0 auto;
+  }
+
+  .main-link img{
+    max-width: auto;
+    max-height: 40px;
+  }
+  
+  li a {
+    background-color: rgba(0,0,0,0.0);
+    font-family: 'Comfortaa', cursive;
+    display: block;
+    margin: auto;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    padding: 1vw 1vw;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+  }
+  
+  li a:hover {
+    color: #888;
+  }
+
+  .register-link{
+    color:black;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+
+  .register-link:hover{
+    transition: 0.5s;
+    background-color: gray;
+    border-color: gray;
+    color:black;
+  }
+
+  .li-right
+  {
+    float: right;
+    padding-right: 30px;
+  }
+
+  .bottom-div{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    flex: 0 0 auto;
+    max-height: 120px;
+    background-color: black;
+  }
+
+.first-about-index{
+  width: 100%; 
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.first-about-index{
+  box-shadow: 0px 50px 70px rgb(219, 55, 5);
+}
+
+
+.info-bottom{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color:gray;
+  height: 100%;
+}
+.info-bottom p{
+  position: absolute;
+}
+
+.social-networks{
+  margin-top: 20px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  display: inline-block;
+}
+
+.inst_logo{
+  margin-right: 30px;
+  display: inline-block;
+}
+
+.vk_logo{
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.social-networks a{
+  opacity: 0.5;
+  top: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.social-networks a:hover{
+  opacity: 1.0;
+    color: #888;
+}
+
+.social-networks img{
+  width: auto;
+  max-height: 48px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.div-about-index{
+  background-color: gray;
+  border: 5px;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px black;
+  font-size: 50px;
+}
+
+.call{
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.div-download{
+  margin-top: 120px;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.div-download h1{
+  font-family: 'Comfortaa', cursive;
+  margin-top: 50px;
+  color: white;
+  margin: 0;
+}
+
+.btn-download{
+  margin-top: 50px;
+}
+
+.btn-download-btn{
+  font-family: 'Comfortaa', cursive;
+  padding: 12px 24px;
+  width: 20%;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #FF6039;
+  font-size: large;
+  border: none;
+}
+
+.rotate-img1{
+position: absolute;
+  left: 70%;
+  top: 80%;
+  width: 150px;
+  height: 150px;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 10s linear infinite;
+  -moz-animation:spin 10s linear infinite;
+  animation:spin 10s linear infinite;
+}
+
+.rotate-img2{
+position: absolute;
+  left: 0%;
+  top: 60%;
+  width: 500px;
+  height: 500px;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 10s linear infinite;
+  -moz-animation:spin 10s linear infinite;
+  animation:spin 10s linear infinite;
+}
+
+.rotate-img3{
+position: absolute;
+  right: 0%;
+  top: 5%;
+  width: 300px;
+  height: 300px;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 15s linear infinite;
+  -moz-animation:spin 15s linear infinite;
+  animation:spin 15s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.about-div{
+margin-top: 120px;
+width: 100%;
+height: auto;
+text-align: center;
+color: white;
+}
+
+.img-div-about{
+margin-top: 100px;
+}
+
+div.item {
+vertical-align: top;
+display: inline-block;
+text-align: center;
+width: 220px;
+}
+
+div.item img {
+width: 200px;
+height: 200px;
+background-color: grey;
+border-radius: 50%;
+}
+.caption {
+display: block;
+}
+
+.icon-img-download{
+  width: 200px;
+height: 200px;
+}
+
+.button-delete-post{
+  font-family: 'Comfortaa', cursive;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #FF6039;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+}
+
+.button-delete-post:hover{
+  transition: 1.5s;
+  padding: 20px 32px;
+}

@@ -2,18 +2,23 @@
 
 {% block content %}
 
+<div class="content-html2">
+    <div class="content-posts">
     <div class="blog_div">
-        <div class="header-post"> 
-            <img src="{{ object.author.profile.image.url }}" class="profile-photo-post">
-            <h1> {{object.title}} </h1>
-        </div>
-        <div class="content-post">
-            <p>{{ object.content }}</p>
-        </div>
-        <div class="info-post">
-            <a href="#" class="author-name-post">{{ object.author }}</a>
-            <p> {{object.date_post}} </p>
-        </div>
+            <div class="header-post"> 
+                <img src="{{ object.author.profile.image.url }}" class="profile-photo-post">
+                <br />
+                <a href="#" class="author-name-post">{{ object.author }}</a>
+                
+            </div>
+            <div class="content-post">
+                <div class="index-post-title"><a href="{% url 'post-detail' post.id %}"> {{object.title}} </a></div>
+                <p>{{ object.content }}</p>
+            </div>
+            <div class="info-post">
+                <p> {{object.date_post}} </p>
+            </div>
+    </div>
     </div>
     {% if object.author == user %}
     <div class="update-post-by-user">
