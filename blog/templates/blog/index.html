@@ -7,11 +7,12 @@
 <div class="blog_div">
         <div class="header-post"> 
             <img src="{{ post.author.profile.image.url }}" class="profile-photo-post">
+            <br />
             <a href="#" class="author-name-post">{{ post.author }}</a>
             
         </div>
         <div class="content-post">
-            <div class="index-post-title"><a href="{% url 'post-detail' post.id %}"> {{post.title}} </a></div>
+            <h1 class="index-post-title"><a href="{% url 'post-detail' post.id %}"> {{post.title}} </a></h1>
             <p>{{ post.content }}</p>
         </div>
         <div class="info-post">
@@ -40,6 +41,7 @@
         <a class="btn-first-paginator" href="?page={{ page_obj.paginator.num_pages }}"> Последнее </a>
     {% endif %}
     </div>
+    
 {% endif %}
 </div>
 {% endblock %}

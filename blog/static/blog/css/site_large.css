@@ -127,7 +127,7 @@ ul {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     flex: 0 0 auto;
-    height: 120px;
+    max-height: 120px;
     background-color: black;
   }
 
@@ -318,4 +318,20 @@ display: block;
 .icon-img-download{
   width: 200px;
 height: 200px;
+}
+
+.button-delete-post{
+  font-family: 'Comfortaa', cursive;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #FF6039;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+}
+
+.button-delete-post:hover{
+  transition: 1.5s;
+  padding: 20px 32px;
 }

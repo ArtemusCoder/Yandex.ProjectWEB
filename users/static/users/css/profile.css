@@ -1,4 +1,24 @@
+.content-html2 h2{
+    color:white;
+}
 
+.posts-by-user h1{
+    color:white;
+    text-align: center;
+}
+
+.post-by-user{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.post-by-user a
+{
+    
+    color: grey;
+    font-size: 25px;
+    text-decoration: none;
+}
 .header-main{
     margin-top: 100px;
 }
